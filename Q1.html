@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 5 Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css" type="text/css" /> 
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/templatemo-script.js"></script>
+</head>
+<style>
+.navBar {
+  position:fixed;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100px;
+  background: rgba(0,0,0,0.8);
+  transform: 0.5s;
+  padding: 0 200px;
+  transition: 0.5s;
+}
+.navBar .logo {
+line-height: 100px;
+color: #fff;
+text-transform: none;
+font-size: 32px;
+font-weight: 600;
+display: inline-block;
+text-decoration: none;
+}
+.navBar ul{
+list-style: none;
+float: right;
+line-height: 100px;
+}
+.navBar ul li{
+  display: inline-block;
+  padding: 0 20px;
+}
+.navBar ul li a{
+  color: #e9c46a;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.navBar ul li a:hover {
+  color: #fff;
+}
+.navBar.animate{
+top: -100px;
+}
+.navBar.sticky{
+  top: 0;
+  z-index: 99;
+}
+</style>
+<body>
+  <div class="bgm">
+    <audio src="video/bg music.mp3"  controls autoplay="true" loop="true"></audio></div>
+    <video autoplay muted loop id="bg-video">
+        <source src="video/gfp-astro-timelapse.mp4" type="video/mp4">
+    </video>
+    <div class="navBar">
+      <a href="#" class="logo">Group 5</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Q1.html">Q1</a></li>
+        <li><a href="#">Q2</a></li>
+        <li><a href="#">Q3</a></li>
+        <li><a href="#">Q4</a></li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+          var scroll = $(document).scrollTop();
+          var navHeight = $('.navBar').outerHeight();
+
+          $(window).scroll(function(){
+            var scrolled = $(document).scrollTop();
+            if(scrolled > navHeight){
+              $('.navBar').addClass('animate');
+            }
+            else{
+              $('.navBar').removeClass('animate');
+            }
+          })
+
+          if(scrolled > scroll){
+            $('.navBar').removeClass('sticky');
+          }
+          else{
+            $('.navBar').addClass('sticky');
+          }
+
+          scroll = $(document).scrollTop();
+        })
+      </script>
+      <li data-page-no="2">
+        <!-- Image Carousel -->
+        <div class="mx-auto position-relative gallery-container">
+          <div class="circle intro-circle-1"></div>
+          <div class="circle intro-circle-2"></div>
+          <div class="mx-auto tm-border-top gallery-slider">
+            <figure class="effect-julia item">
+                <img src="img/GIAN EDRADA.png" alt="Image">
+                <figcaption>
+                    <div>
+                        <p>Gian Carlo F Edrada</p>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+            <figure class="effect-julia item">
+                <img src="img/cedrick.png" alt="Image">
+                <figcaption>
+                    <div>
+                        <p>Cedrick STA. Cruz</p>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+            <figure class="effect-julia item">
+                <img src="img/kraven.png" alt="Image">
+                <figcaption>
+                    <div>
+                        <p>Kraven Hartly Seculles</p>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+            <figure class="effect-julia item">
+                <img src="img/dominique.png" alt="Image">
+                <figcaption>
+                    <div>
+                        <p>Dominique Salvador</p>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+            </figure>
+            <figure class="effect-julia item">
+                <img src="img/lance.png" alt="Image">
+                <figcaption>
+                    <div>
+                        <p>Lance Mitchel Dela Paz</p>
+                    </div>
+                    <a href="#">View more</a>
+                </figcaption>
+          
+                </figcaption>
+                 <!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
+  <div id="loader-wrapper">            
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>  
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/templatemo-script.js"></script>
+</body>
+</html>
+            </figure>
+          </div>
+        </div>
+      </li>
+    </body></html>
