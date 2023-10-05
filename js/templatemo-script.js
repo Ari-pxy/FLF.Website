@@ -1,24 +1,3 @@
-let calcScrollValue = () => {
-  let scrollProgress = document.getElementById("progress");
-  let progressValue = document.getElementById("progress-value");
-  let pos = document.documentElement.scrollTop;
-  let calcHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  let scrollValue = Math.round((pos * 100) / calcHeight);
-  if (pos > 100) {
-    scrollProgress.style.display = "grid";
-  } else {
-    scrollProgress.style.display = "none";
-  }
-  scrollProgress.addEventListener("click", () => {
-    document.documentElement.scrollTop = 0;
-  });
-  scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
-};
-window.onscroll = calcScrollValue;
-window.onload = calcScrollValue;
-
 var gallery = undefined;
 
 function closeMenu() {
@@ -110,17 +89,41 @@ jQuery(function() {
       closeMenu();
     });
     const previewContainer = document.querySelector('.preview-container');
-    const mainContent = document.querySelector('.main-content');
-    
-    document.addEventListener('mousemove', (e) => {
-     const mouseX = e.clientX;
-    
-     // Set a threshold for when to show the preview (e.g., when the cursor is near the right edge)
-     const threshold = window.innerWidth - 100;
-    
-     if (mouseX > threshold) {
-     previewContainer.style.right = '0';
-     } else {
-     previewContainer.style.right = '-300px'; // Hide it off-screen
-     }
-    })})
+const mainContent = document.querySelector('.main-content');
+
+document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const threshold = window.innerWidth - 100;
+
+    if (mouseX > threshold) {
+        previewContainer.style.right = '0';
+    } else {
+        previewContainer.style.right = '-300px';
+    }
+});
+// Add an event listener to the preview container for navigation
+previewContainer.addEventListener('click', () => {
+    window.location.href = 'Q1.html'; // Navigate to page2.html
+});
+
+let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrollValue = Math.round((pos * 100) / calcHeight);
+  if (pos > 100) {
+    scrollProgress.style.display = "grid";
+  } else {
+    scrollProgress.style.display = "none";
+  }
+  scrollProgress.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+};
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+    })
