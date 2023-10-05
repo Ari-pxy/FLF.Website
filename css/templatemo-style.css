@@ -694,6 +694,15 @@ background-color: #f1f1f1;
 transition: right 0.3s ease-in-out;
 
 }
+.pre-container{
+position: fixed;
+top: 0;
+left: -300px;
+width: 300px;
+height: 100%;
+background-color: #f1f1f1;
+transition: left 0.3s ease-in-out;
+}
 
 /* Preloader 
 	https://ihatetomatoes.net/create-custom-preloading-screen/
