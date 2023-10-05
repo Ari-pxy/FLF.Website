@@ -88,4 +88,18 @@ jQuery(function() {
     $("html").click(function(e) {
       closeMenu();
     });
-});
+    const previewContainer = document.querySelector('.preview-container');
+    const mainContent = document.querySelector('.main-content');
+    
+    document.addEventListener('mousemove', (e) => {
+     const mouseX = e.clientX;
+    
+     // Set a threshold for when to show the preview (e.g., when the cursor is near the right edge)
+     const threshold = window.innerWidth - 100;
+    
+     if (mouseX > threshold) {
+     previewContainer.style.right = '0';
+     } else {
+     previewContainer.style.right = '-300px'; // Hide it off-screen
+     }
+    })})
