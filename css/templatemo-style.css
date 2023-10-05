@@ -5,33 +5,6 @@
 html, body, .page-container {
     height: 100%;
 }
-html {
-    scroll-behavior: smooth;
-}
-#progress {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    height: 70px;
-    width: 70px;
-    display: none;
-    place-items: center;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: all .4s;
-  }
-  #progress-value {
-    display: block;
-    height: calc(100% - 15px);
-    width: calc(100% - 15px);
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 35px;
-    color: #001a2e;
-  }
 .navBar {
     position:fixed;
     left:0;
@@ -744,8 +717,8 @@ transition: left 0.3s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
   }
-   
-  #progress-value {
+  
+#progress-value {
     display: block;
     height: calc(100% - 15px);
     width: calc(100% - 15px);
@@ -756,6 +729,7 @@ transition: left 0.3s ease-in-out;
     font-size: 35px;
     color: #001a2e;
   }
+
 /* Preloader 
 	https://ihatetomatoes.net/create-custom-preloading-screen/
 */
