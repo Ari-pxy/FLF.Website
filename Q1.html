@@ -15,55 +15,11 @@
   <script src="js/slick.js"></script>
   <script src="js/templatemo-script.js"></script>
 </head>
-<style>
-.navBar {
-  position:fixed;
-  left:0;
-  top:0;
-  width: 100%;
-  height: 100px;
-  background: rgba(0,0,0,0.8);
-  transform: 0.5s;
-  padding: 0 200px;
-  transition: 0.5s;
-}
-.navBar .logo {
-line-height: 100px;
-color: #fff;
-text-transform: none;
-font-size: 32px;
-font-weight: 600;
-display: inline-block;
-text-decoration: none;
-}
-.navBar ul{
-list-style: none;
-float: right;
-line-height: 100px;
-}
-.navBar ul li{
-  display: inline-block;
-  padding: 0 20px;
-}
-.navBar ul li a{
-  color: #e9c46a;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: 0.5s;
-}
-.navBar ul li a:hover {
-  color: #fff;
-}
-.navBar.animate{
-top: -100px;
-}
-.navBar.sticky{
-  top: 0;
-  z-index: 99;
-}
-</style>
 <body>
+  <div class="pre-container">
+    <p>TEST</p>
+    <img src="img/place holder.png">
+  </div>
   <div class="bgm">
     <audio src="video/bg music.mp3"  controls autoplay="true" loop="true"></audio></div>
     <video autoplay muted loop id="bg-video">
@@ -72,38 +28,13 @@ top: -100px;
     <div class="navBar">
       <a href="#" class="logo">Group 5</a>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Q1.html">Q1</a></li>
-        <li><a href="#">Q2</a></li>
-        <li><a href="#">Q3</a></li>
-        <li><a href="#">Q4</a></li>
+        <li><a class="hover-underline-animation" href="index.html">Home</a></li>
+        <li><a class="hover-underline-animation" href="Q1.html">Q1</a></li>
+        <li><a class="hover-underline-animation" href="Q2.html">Q2</a></li>
+        <li><a class="hover-underline-animation" href="Q3.html">Q3</a></li>
+        <li><a class="hover-underline-animation" href="Q4.html">Q4</a></li>
       </ul>
     </div>
-    <script type="text/javascript">
-        $(function(){
-          var scroll = $(document).scrollTop();
-          var navHeight = $('.navBar').outerHeight();
-
-          $(window).scroll(function(){
-            var scrolled = $(document).scrollTop();
-            if(scrolled > navHeight){
-              $('.navBar').addClass('animate');
-            }
-            else{
-              $('.navBar').removeClass('animate');
-            }
-          })
-
-          if(scrolled > scroll){
-            $('.navBar').removeClass('sticky');
-          }
-          else{
-            $('.navBar').addClass('sticky');
-          }
-
-          scroll = $(document).scrollTop();
-        })
-      </script>
       <li data-page-no="2">
        <!--- Q1 ---> 
         <div class="mx-auto position-relative gallery-container">
@@ -125,7 +56,7 @@ top: -100px;
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/slick.js"></script>
-  <script src="js/templatemo-script.js"></script>
+  <script src="js/templatemo-script2.js"></script>
 </body>
 </html>
             </figure>
