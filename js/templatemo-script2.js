@@ -1,64 +1,88 @@
-function toggle(){
-  var blur = document.getElementById('blur');
-  blur.classList.toggle('active')
-  var popup = document.getElementById('popup');
-  popup.classList.toggle('active')
- }
+const container = document.getElementById("container2");
+const toggleButton = document.getElementById("button1");
+const removeBlurButton = document.getElementById("id01");
 
- "use strict";
+toggleButton.addEventListener("click", function () {
+    container.classList.toggle("blur");
+});
 
-     function qs(selector, all = false) {
-       return all ? document.querySelectorAll(selector) : document.querySelector(selector);
-     }
-     
-     const sections = qs('.section', true);
-     const timeline = qs('.timeline');
-     const line = qs('.line');
-     line.style.bottom = `calc(100% - 20px)`;
-     let prevScrollY = window.scrollY;
-     let up, down;
-     let full = false;
-     let set = 0;
-     const targetY = window.innerHeight * .8;
-     
-     function scrollHandler(e) {
-       const {
-         scrollY
-       } = window;
-       up = scrollY < prevScrollY;
-       down = !up;
-       const timelineRect = timeline.getBoundingClientRect();
-       const lineRect = line.getBoundingClientRect(); // const lineHeight = lineRect.bottom - lineRect.top;
-     
-       const dist = targetY - timelineRect.top;
-       console.log(dist);
-     
-       if (down && !full) {
-         set = Math.max(set, dist);
-         line.style.bottom = `calc(100% - ${set}px)`;
-       }
-     
-       if (dist > timeline.offsetHeight + 50 && !full) {
-         full = true;
-         line.style.bottom = `-50px`;
-       }
-     
-       sections.forEach(item => {
-         // console.log(item);
-         const rect = item.getBoundingClientRect(); //     console.log(rect);
-     
-         if (rect.top + item.offsetHeight / 5 < targetY) {
-           item.classList.add('show-me');
-         }
-       }); // console.log(up, down);
-     
-       prevScrollY = window.scrollY;
-     }
-     
-     scrollHandler();
-     line.style.display = 'block';
-     window.addEventListener('scroll', scrollHandler);
-     
+removeBlurButton.addEventListener("click", function () {
+    container.classList.remove("blur");
+});
+
+const container1 = document.getElementById("container2");
+const toggleButton1 = document.getElementById("button2");
+const removeBlurButton1 = document.getElementById("id02");
+
+toggleButton1.addEventListener("click", function () {
+    container.classList.toggle("blur");
+});
+removeBlurButton1.addEventListener("click", function () {
+    container.classList.remove("blur");
+});
+
+const container2 = document.getElementById("container2");
+const toggleButton2 = document.getElementById("button3");
+const removeBlurButton2 = document.getElementById("id03");
+
+toggleButton2.addEventListener("click", function () {
+    container.classList.toggle("blur");
+});
+removeBlurButton2.addEventListener("click", function () {
+    container.classList.remove("blur");
+});
+
+const container3 = document.getElementById("container2");
+const toggleButton3 = document.getElementById("button4");
+const removeBlurButton3 = document.getElementById("id04");
+
+toggleButton3.addEventListener("click", function () {
+    container.classList.toggle("blur");
+});
+removeBlurButton3.addEventListener("click", function () {
+    container.classList.remove("blur");
+});
+
+const container4 = document.getElementById("container2");
+const toggleButton4 = document.getElementById("button5");
+const removeBlurButton4 = document.getElementById("id05");
+
+toggleButton4.addEventListener("click", function () {
+    container.classList.toggle("blur");
+});
+removeBlurButton4.addEventListener("click", function () {
+    container.classList.remove("blur");
+});
+
+const container5 = document.getElementById("container2");
+const toggleButton5 = document.getElementById("button6");
+const removeBlurButton5 = document.getElementById("id06");
+
+toggleButton5.addEventListener("click", function () {
+    container.classList.toggle("blur");
+});
+removeBlurButton5.addEventListener("click", function () {
+    container.classList.remove("blur");
+});
+
+
+window.addEventListener('scroll', reveal);
+
+function reveal() {
+  var reveals = document.querySelectorAll('.reveal');
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;  // Fix the typo here
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 100;
+
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
 var gallery = undefined;
 
 function closeMenu() {
@@ -149,24 +173,24 @@ jQuery(function() {
     $("html").click(function(e) {
       closeMenu();
     });
-    const previewContainer = document.querySelector('.preview-container');
+    const previewContainer = document.querySelector('.pre-container');
 const mainContent = document.querySelector('.main-content');
 
 document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX;
-    const threshold = window.innerWidth - 100;
+    const threshold = 100; // Adjust this threshold as needed
 
-    if (mouseX > threshold) {
-        previewContainer.style.right = '0';
+    if (mouseX < threshold) { // Check if cursor is on the left
+        previewContainer.style.left = '0';
     } else {
-        previewContainer.style.right = '-300px';
+        previewContainer.style.left = '-300px';
     }
 });
+
 // Add an event listener to the preview container for navigation
 previewContainer.addEventListener('click', () => {
-    window.location.href = 'Q1.html'; // Navigate to page2.html
+    window.location.href = 'index.html'; // Navigate to page2.html
 });
-
 let calcScrollValue = () => {
   let scrollProgress = document.getElementById("progress");
   let progressValue = document.getElementById("progress-value");
@@ -188,3 +212,4 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
     })
+    
