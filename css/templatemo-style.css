@@ -24,7 +24,7 @@ padding: 0;
 box-sizing: border-box;
 }
 .wrapper{
-margin-top: 50px;
+margin: 100px auto;
 }
 
 .wrapper h1{
@@ -54,9 +54,8 @@ position: relative;
 height: 250px;
 }
 .team .team_member:hover {
-background-color: #f0fff0;
+background-color: #90fee4;
 color: black;
-cursor: pointer;
 border: 3px solid black;
 }
 .team .team_member h3{
@@ -145,6 +144,9 @@ border-radius: 50%;
 .reveal.active {
     transform: translateY(0px);
     opacity: 1;
+}
+.w3-button {
+border-radius: 5%;
 }
 #id01 hr {
 margin-left: 20px;
