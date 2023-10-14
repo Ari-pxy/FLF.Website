@@ -191,6 +191,7 @@ document.addEventListener('mousemove', (e) => {
 previewContainer.addEventListener('click', () => {
     window.location.href = 'index.html'; // Navigate to page2.html
 });
+
 let calcScrollValue = () => {
   let scrollProgress = document.getElementById("progress");
   let progressValue = document.getElementById("progress-value");
