@@ -15,6 +15,123 @@ html {
     box-sizing: border-box;
     color: black;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.wrapper{
+margin-top: 50px;
+}
+
+.wrapper h1{
+font-family: 'Allura', cursive;
+font-size: 52px;
+margin-bottom: 60px;
+text-align: center;
+}
+
+.team{
+display: flex;
+justify-content: center;
+width: auto;
+text-align: center;
+flex-wrap: wrap;
+}
+
+.team .team_member{
+background: #fff;
+margin: 5px;
+margin-bottom: 50px;
+width: 280px;
+padding: 20px;
+line-height: 20px;
+color: #8e8b8b;  
+position: relative;
+height: 250px;
+}
+.team .team_member:hover {
+background-color: #f0fff0;
+color: black;
+cursor: pointer;
+border: 3px solid black;
+}
+.team .team_member h3{
+color: #4169e1;
+font-size: 21px;
+margin-top: 50px;
+}
+
+.team .team_member p.role{
+color: #8e8b8b;
+margin: 25px 0;
+font-size: 12px;
+text-transform: uppercase;
+}
+
+.team .team_member .team_img{
+position: absolute;
+top: -50px;
+left: 50%;
+transform: translateX(-50%);
+width: 100px;
+height: 100px;
+border-radius: 50%;
+background: #fff;
+}
+
+.team .team_member .team_img img{
+width: 100px;
+height: 100px;
+padding: 5px;
+border-radius: 50%;
+}
+.section1{
+    float:left;
+    width: 100%;
+    text-align: left;
+    padding:50px 10px;
+    margin-bottom:20px;
+    margin-left: 40px;
+   }
+   .section2{
+    float:left;
+    width: 100%;
+    text-align: left;
+    margin-bottom:20px;
+    margin-left: 40px;
+   }
+   .section3{
+    float:left;
+    width: 100%;
+    text-align: left;
+    margin-bottom:20px;
+    margin-left: 40px;
+    margin-top: 5px;
+   }
+   .section4{
+    float:left;
+    width: 100%;
+    text-align: left;
+    margin-bottom:20px;
+    margin-left: 40px;
+   }
+   .section5{
+    float:left;
+    width: 100%;
+    text-align: left;
+    margin-bottom:20px;
+    margin-left: 40px;
+   }
+   .container3{
+	max-width: 1140px;
+	height:auto;
+	margin:40px auto;
+	padding:20px;
+}
 .blur {
         filter: blur(8px);
         -webkit-filter: blur(8px);
@@ -383,6 +500,7 @@ h2 {
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
+    align-self: center;
 }
 
 .container-fluid {
@@ -556,7 +674,7 @@ h2 {
 .intro-left {
     margin-right: 20px;
     padding: 30px 40px;
-    max-width: 1000px;    
+    max-width: 1100px;    
 }
 
 .intro-img-1 {
