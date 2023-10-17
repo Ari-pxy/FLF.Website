@@ -54,16 +54,7 @@ removeBlurButton4.addEventListener("click", function () {
     container.classList.remove("blur");
 });
 
-const container5 = document.getElementById("container2");
-const toggleButton5 = document.getElementById("button6");
-const removeBlurButton5 = document.getElementById("id06");
 
-toggleButton5.addEventListener("click", function () {
-    container.classList.toggle("blur");
-});
-removeBlurButton5.addEventListener("click", function () {
-    container.classList.remove("blur");
-});
 
 
 window.addEventListener('scroll', reveal);
