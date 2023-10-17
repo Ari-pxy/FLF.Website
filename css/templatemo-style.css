@@ -2,6 +2,9 @@
 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200;1,500&display=swap');
+
+
 html, body, .page-container {
     height: 100%;
 }
@@ -17,6 +20,9 @@ html {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+
 
 *{
 margin: 0;
@@ -25,6 +31,7 @@ box-sizing: border-box;
 }
 .wrapper{
 margin: 100px auto;
+cursor: pointer;
 }
 
 .wrapper h1{
@@ -54,15 +61,15 @@ position: relative;
 height: 250px;
 }
 .team .team_member:hover {
-background-color: #90fee4;
-color: black;
-border: 3px solid black;
-}
-.team .team_member h3{
-color: #4169e1;
-font-size: 21px;
-margin-top: 50px;
-}
+    background-color: #d8d8f1;
+    color: rgb(167, 195, 216);
+    border: 3px solid rgb(167,195,216);
+    }
+    .team .team_member h3{
+    color: #4169E1;
+    font-size: 21px;
+    margin-top: 50px;
+    }
 
 .team .team_member p.role{
 color: #8e8b8b;
@@ -101,14 +108,14 @@ border-radius: 50%;
     width: 100%;
     text-align: left;
     margin-bottom:20px;
-    margin-left: -50px;
+    margin-left: -115px;
    }
    .section3{
     float:left;
     width: 100%;
     text-align: left;
     margin-bottom:20px;
-    margin-left: -50px;
+    margin-left: -115px;
     margin-top: 5px;
    }
    .section4{
@@ -116,14 +123,14 @@ border-radius: 50%;
     width: 100%;
     text-align: left;
     margin-bottom:20px;
-    margin-left: -50px;
+    margin-left:-115px;
    }
    .section5{
     float:left;
     width: 100%;
     text-align: left;
     margin-bottom:20px;
-    margin-left: -50px;
+    margin-left: -115px;
    }
    .container3{
 	max-width: 1140px;
@@ -131,6 +138,10 @@ border-radius: 50%;
 	margin:40px auto;
 	padding:20px;
 }
+.container3 p{
+    font-family: 'Raleway', sans-serif;
+}
+
 .blur {
         filter: blur(8px);
         -webkit-filter: blur(8px);
@@ -147,6 +158,12 @@ border-radius: 50%;
 }
 .w3-button {
 border-radius: 5%;
+}
+.w3-container b{
+    font-family: 'Raleway', sans-serif;
+}
+.w3-container h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #id01 hr {
 margin-left: 20px;
@@ -230,9 +247,8 @@ margin-right: 50px;
     
 }
 .container2#blur.active{
-    filter: blur(20px);
-    pointer-events: none;
-    user-select: none;
+    filter: blur(10px);
+
 }
 .container1 {
     padding: 10px 50px;
@@ -277,6 +293,7 @@ margin-right: 50px;
     border-radius: 6px;
     font-size: 15px;
 }
+
 .left-container {
     left: 0;
 }
@@ -290,6 +307,9 @@ margin-right: 50px;
     right:-20px;
     top: 32px; 
     z-index: 10; 
+}
+.container1{
+    font-family: 'Raleway', sans-serif;
 }
 .right-container img {
     left: -20px;
@@ -316,11 +336,22 @@ margin-right: 50px;
 }
 .text-box h2 {
     font-weight: 600;
+    
+}
+.text-box i{
+    font-family: 'Raleway', sans-serif;
+}
+.text-box b{
+    font-family: 'Raleway', sans-serif;
 }
 .text-box small {
     display: inline-block;
     margin-bottom: 15px;
 }
+.text-box h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .left-container-arrow {
     height: 0;
     width: 0;
@@ -376,8 +407,7 @@ margin-right: 50px;
 #progress {
     position: fixed;
     bottom: 20px;
-    left: 0;
-    right: 10px; /* Set both left and right to 0 */
+    right: 20px;
     margin: auto; /* Center horizontally */
     height: 70px;
     width: 70px;
@@ -538,10 +568,10 @@ h2 {
     min-height: 100%;
     transform: translateX(-50%) translateY(-50%);
     z-index: -100;
-    background-image: url(../img/tm-astro-bg.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: blur(5px);
 }
 .hero{
     width: 100%;
@@ -948,6 +978,7 @@ figure.effect-julia:hover p {
 
 .tm-mb-45 {
     margin-bottom: 45px;
+    font-family: 'Unica One', sans-serif;
 }
 
 .tm-btn-pad-2 {
@@ -1086,9 +1117,9 @@ figure.effect-julia:hover p {
 .preview {
     display: none;
     position: absolute;
-    top: 80px;
-    right: -430px; /* Use a negative value to position it outside of the container */
-    width: 435px;
+    top: 60px;
+    right: -400px; /* Use a negative value to position it outside of the container */
+    width: 400px;
     height: 200x;
     background-color: #f9f9f9;
     border: 10px solid #f9f9f9;
@@ -1106,9 +1137,16 @@ figure.effect-julia:hover p {
 }
 .next-arrow {
     position: absolute;
-    right: -11px;
-    top: 150px; /* Adjust the top value as needed to position it vertically */
-    height: 50px;
+    right: 25px;
+    top: 135px; /* Adjust the top value as needed to position it vertically */
+    height: 25px;
+}
+.line1{
+    margin-top: 10px;
+}
+.heading1{
+    margin-top: -10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Preloader 
