@@ -88,19 +88,6 @@ jQuery(function() {
     $("html").click(function(e) {
       closeMenu();
     });
-    const previewContainer = document.querySelector('.preview-container');
-const mainContent = document.querySelector('.main-content');
-
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX;
-    const threshold = window.innerWidth - 100;
-
-    if (mouseX > threshold) {
-        previewContainer.style.right = '0';
-    } else {
-        previewContainer.style.right = '-300px';
-    }
-});
 // Add an event listener to the preview container for navigation
 previewContainer.addEventListener('click', () => {
     window.location.href = 'Q1.html'; // Navigate to page2.html
@@ -127,3 +114,76 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
     })
+
+    // reveal onscroll will only work to elements that has the "reveal" class
+
+     window.addEventListener('scroll', reveal);
+
+function reveal() {
+  var reveals = document.querySelectorAll('.reveal');
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;  // Fix the typo here
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }}}
+
+
+    document.addEventListener('DOMContentLoaded', function(){
+      var section2 = document.querySelector('.section2');
+      var preview = document.querySelector('.preview');
+      var isCursorOnRight = false; // Track if the cursor is on the right
+      var threshold = -250; // Customize this threshold value as needed
+    
+      section2.addEventListener('mousemove', function(event) {
+        var sectionWidth = section2.offsetWidth;
+        var cursorX = event.clientX;
+    
+        if (cursorX >= sectionWidth - threshold) {
+          if (!isCursorOnRight) {
+            preview.style.display = 'block';
+            isCursorOnRight = true;
+          }
+        } else {
+          preview.style.display = 'none';
+          isCursorOnRight = false;
+        }
+      });
+    
+      section2.addEventListener('mouseout', function(event) {
+        var relatedTarget = event.relatedTarget;
+    
+        if (relatedTarget && relatedTarget !== section2 && !section2.contains(relatedTarget)) {
+          isCursorOnRight = false;
+          preview.style.display = 'none';
+        }
+      });
+    });
+    let calcScrollValue = () => {
+      let scrollProgress = document.getElementById("progress");
+      let progressValue = document.getElementById("progress-value");
+      let pos = document.documentElement.scrollTop;
+      let calcHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollValue = Math.round((pos * 100) / calcHeight);
+      if (pos > 100) {
+        scrollProgress.style.display = "grid";
+      } else {
+        scrollProgress.style.display = "none";
+      }
+      scrollProgress.addEventListener("click", () => {
+        document.documentElement.scrollTop = 0;
+      });
+      scrollProgress.style.background = `conic-gradient(#8ea5eb,#6667AB,#5E5A80 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+    };
+    window.onscroll = calcScrollValue;
+    window.onload = calcScrollValue;
+        
+    
+    
