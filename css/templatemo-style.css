@@ -101,14 +101,14 @@ border-radius: 50%;
     width: 100%;
     text-align: left;
     margin-bottom:20px;
-    margin-left: 40px;
+    margin-left: -50px;
    }
    .section3{
     float:left;
     width: 100%;
     text-align: left;
     margin-bottom:20px;
-    margin-left: 40px;
+    margin-left: -50px;
     margin-top: 5px;
    }
    .section4{
@@ -116,14 +116,14 @@ border-radius: 50%;
     width: 100%;
     text-align: left;
     margin-bottom:20px;
-    margin-left: 40px;
+    margin-left: -50px;
    }
    .section5{
     float:left;
     width: 100%;
     text-align: left;
     margin-bottom:20px;
-    margin-left: 40px;
+    margin-left: -50px;
    }
    .container3{
 	max-width: 1140px;
@@ -671,6 +671,7 @@ h2 {
 
 .tm-bg-dark {
     background-color: rgba(0,0,0,0.3);
+
 }
 
 .intro-left {
@@ -1078,25 +1079,36 @@ figure.effect-julia:hover p {
     }
 }
 
-.preview-container{
-position:absolute;
-top: 0;
-right: -300px;
-width: 300px;
-height: 50%;
-background-color: #f1f1f1;
-transition: right 0.3s ease-in-out;
-cursor:pointer;
+::-webkit-scrollbar {
+  display: none;
 }
-.pre-container{
-position: absolute;
-top: 0;
-left: -300px;
-width: 300px;
-height: 50%;
-background-color: #f1f1f1;
-transition: left 0.3s ease-in-out;
-cursor: pointer;
+
+.preview {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: -430px; /* Use a negative value to position it outside of the container */
+    width: 435px;
+    height: 200x;
+    background-color: #f9f9f9;
+    border: 10px solid #f9f9f9;
+    align-items: center;
+    align-content: center;
+    opacity: 0;
+      transition: opacity 0.3s ease;
+}
+.section2:hover .preview {
+    display: block;
+    opacity: 1;
+  }
+.preview img{
+  height: 170px;
+}
+.next-arrow {
+    position: absolute;
+    right: -11px;
+    top: 150px; /* Adjust the top value as needed to position it vertically */
+    height: 50px;
 }
 
 /* Preloader 
